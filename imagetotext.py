@@ -38,7 +38,7 @@ def main():
     
     #tocsv(txt) #uncomment only if a csv is required 
 
-    markatt(lis,todate,docname)
+    markatt(txt,todate,docname)
       
 if __name__ == '__main__':
     main()

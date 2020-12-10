@@ -8,7 +8,7 @@ def markatt(checklist,todate: str=today.strftime("%d/%m/%Y"),docname: str="MMM a
 
     #authentication
     scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json",scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json",scope)  #name the keyfile - "creds.json"
     client = gspread.authorize(creds)
     for j in range(2):  #loops through all sheets
         sheet = client.open(docname).get_worksheet(j)  #worksheet("Section A")

@@ -2,9 +2,9 @@ import pytesseract
 import pandas as pd
 import requests
       
-def img2str():
-    pytesseract.pytesseract.tesseract_cmd = r'D:\Tesseract\tesseract'
-    txt=pytesseract.image_to_string(r'D:\Programs\Python\attendance\list2.png')
+def img2str(): #change path to location of tesseract and file to location of ss
+    pytesseract.pytesseract.tesseract_cmd = r'path'
+    txt=pytesseract.image_to_string(r'file')
     return txt
 
 def sorting(txt):

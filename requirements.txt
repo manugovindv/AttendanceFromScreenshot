@@ -1,0 +1,4 @@
+pytesseract
+requests
+gspread
+gspread oauth2client

@@ -32,21 +32,6 @@ def tocsv():
     lis=sorting(txt)
     df = pd.DataFrame(lis)
     df.to_csv('test2.csv', index=False, header=False)  
-def push(vals):
-        url = "https://script.google.com/macros/s/AKfycbyr3kyl7wcTQYennD2P_odF0WLM8DzLQ5kfEAcFQrIYgzW4HJs/exec"
-        parameters = {"id":"Sheet1"}
-        paramlist=["turtle_x","turtle_y","turtle_theta"]
-        
-        vals=tuple(map(int, vals.strip("()").split(", ")))
-        print(vals)
-        paramlist=["turtle_x","turtle_y","turtle_theta"]
-        for val,i in zip(vals,paramlist):
-            parameters[i] = val
-            parameters1[i] = val
-        
-        print(parameters)
-        response = requests.get(url, params=parameters)
-        print(response.content)
 
 def main():
     tocsv()

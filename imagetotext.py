@@ -18,12 +18,8 @@ def sorting(txt):
     res=""
     for i in txt:
         i=i.upper()
-        if i.startswith("18"):
+        if i.startswith("1"):
             res=res+" "+i
-    for i in txt:
-        i=i.upper()
-        if i.startswith("19"):
-            res=res+" "+i  
     res=res.split()
     res=sorted(res,key = lambda x:int(x[-3:]))
     return res    

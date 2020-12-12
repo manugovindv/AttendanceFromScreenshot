@@ -7,7 +7,7 @@ def img2str(): #change path to location of tesseract and file to location of ss
     txt=pytesseract.image_to_string(r'file')
     return txt
 
-def sorting(txt):
+def cleaning(txt):
     txt=txt.replace("("," ")
     txt=txt.replace(")"," ")
     txt=txt.replace("["," ")
@@ -22,23 +22,22 @@ def sorting(txt):
         if i.startswith("1"):
             res.append(i)
     
-    res=sorted(res,key = lambda x:int(x[-3:]))
     return res    
 
-def tocsv(txt):
+def tocsv(cltxt):
     import pandas as pd
-    lis=sorting(txt)
+    lis=sorted(cltxt,key = lambda x:int(x[-3:]))  #sorting the cleaned list
     df = pd.DataFrame(lis)
     df.to_csv('test4.csv', index=False, header=False)  
 
 def main():
     todate = "11/12/2020"   #change accordingly,maintain dd/mm/yyyy format
     docname = "MMM attendance"
-    txt=img2str()
-    
-    #tocsv(txt) #uncomment only if a csv is required 
+    txt = img2str()
+    cltxt = cleaning(txt)
+    #tocsv(cltxt) #uncomment only if a csv is required 
 
-    markatt(txt,todate,docname)
+    markatt(cltxt,todate,docname)
       
 if __name__ == '__main__':
     main()

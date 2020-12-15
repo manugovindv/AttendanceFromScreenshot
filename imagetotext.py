@@ -35,14 +35,14 @@ def tocsv(cltxt):
     df.to_csv('test4.csv', index=False, header=False)  
 
 def main():
-    todate = "11/12/2020"   #change accordingly,maintain dd/mm/yyyy format
+    #todate = "11/12/2020"   #change accordingly,maintain dd/mm/yyyy format
     docname = pathfile['docname']
     imagepath = pathfile['imgPath'].encode('unicode_escape')
     txt = img2str(imagepath)
     cltxt = cleaning(txt)
     #tocsv(cltxt) #uncomment only if a csv is required 
 
-    markatt(cltxt,docname,todate)  #if {todate} is not passed as argument,it defaults to date of the same day
+    markatt(cltxt,docname)  #if {todate} is not passed as argument,it defaults to date of the same day
       
 if __name__ == '__main__':
     main()

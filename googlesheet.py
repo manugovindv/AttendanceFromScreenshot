@@ -4,7 +4,7 @@ from datetime import date
 
 today = date.today()
 
-def markatt(checklist,todate: str=today.strftime("%d/%m/%Y"),docname: str="MMM attendance"): #strftime to format dd/mm/yyyy
+def markatt(checklist,docname: str="MMM attendance",todate: str=today.strftime("%d/%m/%Y")): #strftime to format dd/mm/yyyy
 
     #authentication
     scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]

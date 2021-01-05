@@ -24,7 +24,7 @@ def cleaning(txt):
     for i in txt:
         i=i.upper()
         if i.startswith("1"):
-            res.append(i)
+            res.append(i[:10])
     
     return res    
 

@@ -7,7 +7,7 @@ pathfile = json.loads("paths.json")
 
 def img2str(imagepath): #change path to location of tesseract and file to location of ss
     
-    pytesseract.pytesseract.tesseract_cmd = pathfile['tsrctPath'].encode('unicode_escape')
+    pytesseract.pytesseract.tesseract_cmd = pathfile['tsrctPath']
     txt=pytesseract.image_to_string(imagepath)
     return txt
 

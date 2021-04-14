@@ -7,7 +7,7 @@ pathfile = json.loads("paths.json")
 
 def img2str(imagepath): #change path to location of tesseract and file to location of ss
     
-    pytesseract.pytesseract.tesseract_cmd = pathfile['tsrctPath'].encode('unicode_escape')
+    pytesseract.pytesseract.tesseract_cmd = pathfile['tsrctPath']
     txt=pytesseract.image_to_string(imagepath)
     return txt
 
@@ -37,8 +37,7 @@ def tocsv(cltxt):
 def main():
     #todate = "11/12/2020"   #change accordingly,maintain dd/mm/yyyy format
     docname = pathfile['docname']
-    imagepath = pathfile['imgPath'].encode('unicode_escape')
-    txt = img2str(imagepath)
+    imagepath = pathfile['imgPath']
     cltxt = cleaning(txt)
     #tocsv(cltxt) #uncomment only if a csv is required 
 

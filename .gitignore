@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 creds.json
-
+images/
 
 # C extensions
 *.so

@@ -13,7 +13,7 @@ def markatt(checklist,docname: str="MMM attendance",todate: str=today.strftime("
 
     #authentication
     scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json",scope)  #name the keyfile - "creds.json"
+    creds = ServiceAccountCredentials.from_json_keyfile_name("..\creds.json",scope)  #name the keyfile - "creds.json"
     client = gspread.authorize(creds)
     sheet = client.open(docname).worksheets()
     for j in sheet:  #loops through all sheets

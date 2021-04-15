@@ -3,7 +3,10 @@ import requests
 from googlesheet import markatt
 import json
 
-pathfile = json.loads("paths.json")
+json_file_path = "paths.json"
+
+with open(json_file_path, 'r') as j:
+     pathfile = json.loads(j.read())
 
 def img2str(imagepath): #change path to location of tesseract and file to location of ss
     

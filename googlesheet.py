@@ -31,7 +31,7 @@ def markatt(checklist,docname: str="MMM attendance",todate: str=today.strftime("
         for indx,reg in enumerate(rang):
             if reg in checklist:
                 #print(f'{reg} is present today')
-                attli.append(models.Cell(indx+2,row+1,'1'))
+                attli.append(models.Cell(indx+2,row+1,1))
                 #sheet.update_cell(indx+2,row+1,'1') #updates attendance in sheet
                 checklist.remove(reg)  #removes the element from the list after checking
             else:

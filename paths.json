@@ -1,5 +1,6 @@
 {
-    "tsrctPath":"C:\\Program Files\\Tesseract-OCR\\tessseract",
-    "imgPath":".",
-    "docname":"MMM attendance"
+    "tsrctPath":"D:\\Tesseract\\tessseract",
+    "imgPath":"images\\14-4-21.png",
+    "date":"14/04/2021",
+    "docname":"FEM attendance"
 }
